@@ -1,0 +1,34 @@
+package com.thread;
+
+public class InterrupEx {
+
+	public static void main(String[] args) {
+		Thread t1 = new Thread(new BlockinTask());
+		t1.start();
+		t1.interrupt();
+		// TODO Auto-generated method stub
+		
+		BlockingThread t2 = new BlockingThread();
+		t2.start();
+
+	}
+	
+	private static class BlockinTask implements Runnable{
+		public void run() {
+			try {
+				Thread.sleep(50000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Exiting blocking tasks");
+			}
+		}
+	}
+
+	private static class BlockingThread extends Thread{
+		public void run() {
+			System.out.println("in thread class");
+		}
+		
+	}
+	
+}

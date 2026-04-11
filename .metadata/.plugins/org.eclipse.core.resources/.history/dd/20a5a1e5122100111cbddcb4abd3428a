@@ -1,0 +1,16 @@
+package com.streams;
+
+import java.util.List;
+
+public class JavaStreamsIntermediate {
+
+	public static void main(String[] args) {
+
+		//remove duplicate
+		List<Integer> num = List.of(2,2,3,4,5,2,4,4);
+		List<Integer> unique = num.stream().distinct().toList();
+		System.out.println("unique: "+unique);
+		
+	}
+
+}

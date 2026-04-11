@@ -1,0 +1,13 @@
+package com.integer;
+
+public class SecondLargestNumUsingPQ {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] arr = {7,10,4,3,20,15};
+		
+
+	}
+
+}

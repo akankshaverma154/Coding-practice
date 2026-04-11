@@ -1,0 +1,26 @@
+package com.integer;
+
+public class RemoveDuplicateElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//sortedArrayWithDuplicates
+		 int[] num = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+		 
+		 int cnt =0;
+		 
+		 for(int i=1;i<num.length;i++) {
+			 if(num[cnt] != num[i]) {
+				 cnt++;
+				 num[cnt]=num[i];
+			 }
+		 }
+		 for(int c : num) {
+			 System.out.println(c);
+			 System.out.println("no.of elements: "+cnt+1);
+		 }
+		 
+		
+	}
+
+}

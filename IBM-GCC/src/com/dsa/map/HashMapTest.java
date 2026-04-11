@@ -1,0 +1,53 @@
+package com.dsa.map;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+import com.dsa.list.Employee;
+
+public class HashMapTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Employee> list = new ArrayList<>();
+		list.add(new Employee("aks", "verma", 1));
+		list.add(new Employee("abc", "verma", 2));
+		list.add(new Employee("def", "verma", 3));
+		list.add(new Employee("ghj", "verma", 4));
+		list.add(new Employee("aks", "verma", 1));
+		
+		Map<String, Integer> map = new HashMap<>();
+		
+		list.forEach(e->{
+			System.out.println(e.getFirstName()+" "+e.getLstName()+ " "+e.getId());
+			map.put(e.getFirstName()+ " " +e.getLstName(), e.getId());
+			
+		});		
+		map.forEach((k,v)->System.out.println("Name : "+k + " "+"id : "+v));
+		
+		Map<String, Integer> linkedHashMap = new LinkedHashMap<>();
+		
+		list.forEach(e->{
+			System.out.println(e.getFirstName()+" "+e.getLstName()+ " "+e.getId());
+			map.put(e.getFirstName()+ " " +e.getLstName(), e.getId());
+			
+		});		
+		map.forEach((k,v)->System.out.println("Name : "+k + " "+"id : "+v));
+
+		
+		TreeMap<Integer,String> treeMap = new TreeMap<>();
+		treeMap.put(2, "Geeks");
+		treeMap.put(1, "for");
+		treeMap.put(3, "abc");
+		
+		treeMap.forEach((k,v)->System.out.println(k+" "+v));
+		
+		
+		
+	}
+
+}

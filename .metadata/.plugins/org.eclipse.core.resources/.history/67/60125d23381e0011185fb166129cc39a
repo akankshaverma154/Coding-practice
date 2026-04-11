@@ -1,0 +1,13 @@
+package com.integer;
+
+public class RemoveDuplicateElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 int[] sortedArrayWithDuplicates = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+		 
+		 
+		
+	}
+
+}

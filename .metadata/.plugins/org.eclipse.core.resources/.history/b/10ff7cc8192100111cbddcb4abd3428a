@@ -1,0 +1,25 @@
+package com.streams;
+
+import java.util.Comparator;
+import java.util.List;
+
+public class JavaStreamsIntermediate {
+
+	public static void main(String[] args) {
+
+		//remove duplicate
+		List<Integer> num = List.of(2,2,5,3,4,2,4,4);
+		List<Integer> unique = num.stream().distinct().toList();
+		System.out.println("unique: "+unique);
+		
+		//sort a list
+		List<Integer> sorted = num.stream().distinct().sorted().toList();
+		System.out.println("Sorted : "+sorted);
+		
+		//reverse and sort
+		List<Integer> revSort = num.stream().distinct().sorted(Comparator.reverseOrder()).toList();
+		System.out.println("revSort : "+revSort);
+		
+	}
+
+}

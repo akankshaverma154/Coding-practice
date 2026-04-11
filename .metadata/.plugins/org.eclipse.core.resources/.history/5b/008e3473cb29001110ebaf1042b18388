@@ -1,0 +1,21 @@
+package com.random;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Map<Character, Integer> map = new HashMap<>();
+		
+		String s = "abcabcd";
+		
+		char[] c = s.toCharArray();
+		
+		map.put('a', 0);
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.thread;
+
+public class MyThread1 implements Runnable{
+
+	@Override
+	public void run() {
+
+		System.out.println("Thread class by implementing Runnable Interface");
+		
+	}
+
+}

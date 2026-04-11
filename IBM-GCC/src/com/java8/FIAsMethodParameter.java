@@ -1,0 +1,25 @@
+package com.java8;
+
+public class FIAsMethodParameter {
+
+	interface Calculator{
+		int operate(int a, int b);
+	}
+	
+		public static int calculate(int a, int b, Calculator c) {
+			return c.operate(a,b);
+		}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int addition = calculate(11,6, (x,y)->x+y);
+		int substraction = calculate(11, 6, (x,y)->x-y);
+		
+		System.out.println("addition : "+addition);
+		System.out.println("substraction : "+substraction);
+	}
+
+}
+

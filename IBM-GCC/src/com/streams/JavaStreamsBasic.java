@@ -1,0 +1,47 @@
+package com.streams;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+public class JavaStreamsBasic {
+
+	public static void main(String[] args) {
+		//find odd and even
+		List<Integer> numbers = List.of(1,2,3,4,5,6);
+		
+		List<Integer> even = numbers.stream().filter(n->n%2==0)
+				.collect(Collectors.toList());
+		System.out.println("even : "+even);
+		
+		List<Integer> odd = numbers.stream().filter(n->n%2!=0)
+				.collect(Collectors.toList());
+		System.out.println("odd : "+odd);
+		
+		//To UpperCase
+		List<String> names = List.of("john","alex","mark");
+		List<String> upper = names.stream().map(String::toUpperCase)
+				.toList();
+		System.out.println("upper : "+upper);
+		
+		
+		//sum of 2 numbers
+		int sum = numbers.stream()
+				.mapToInt(Integer::intValue)
+				.sum();
+		System.out.println("sum : "+sum);
+		
+		long count = numbers.stream().count();
+		System.out.println("count : "+count);
+		
+		//find min and max
+		Optional<Integer> min = numbers.stream().min(Integer::compare);
+		System.out.println("min : "+min);
+		
+		Optional<Integer> max = numbers.stream().max(Integer::compare);
+		System.out.println("max : "+max);
+		
+		
+	}
+
+}

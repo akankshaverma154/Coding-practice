@@ -1,0 +1,8 @@
+package com.exceptionhandler;
+
+@Service
+public class ErrorResponse {
+
+	
+	
+}
