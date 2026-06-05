@@ -1,6 +1,7 @@
 package com.dsa.list;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ListTest {
@@ -14,6 +15,7 @@ public class ListTest {
 		list.add(new Employee("def", "verma", 3));
 		list.add(new Employee("ghj", "verma", 4));
 		
+		list.sort(new Employee.SortById());
 		
 		list.forEach(e->System.out.println("employee : "+e));
 		System.out.println("2nd employee :"+list.get(1));

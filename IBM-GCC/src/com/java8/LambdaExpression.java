@@ -1,5 +1,9 @@
 package com.java8;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class LambdaExpression {
 	
 	interface CalculatorSum{
@@ -38,6 +42,23 @@ public class LambdaExpression {
 
 		p.product(8,8);
 		
+		List<Integer> list = Arrays.asList(2,3,4,5,6,7);
+		
+		Runnable even = () -> {
+			System.out.println("even num: "+list.stream().filter(x->x%2==0)
+			.collect(Collectors.toList()));
+		};
+		
+		Thread evenThread = new Thread(even);
+		evenThread.start();
+		
+		Runnable odd = () ->  {
+			System.out.println("odd nums : "+list.stream().filter(x->x%2!=0)
+					.collect(Collectors.toList()));
+		};
+		
+		Thread oddThread = new Thread(odd);
+		oddThread.start();
 	}
 	
 	

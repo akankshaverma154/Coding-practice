@@ -1,8 +1,9 @@
 package com.dsa.list;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Employee {
+public class Employee{
 	
 	String firstName;
 	String lstName;
@@ -51,6 +52,14 @@ public class Employee {
 		return Objects.equals(firstName, other.firstName) && id == other.id && Objects.equals(lstName, other.lstName);
 	}
 	
-	
+	public static class SortById implements Comparator<Employee> {
 
-}
+	    @Override
+	    public int compare(Employee o1, Employee o2) {
+	        return Integer.compare(o1.getId(), o2.getId());
+	    }
+	}
+		
+	}
+
+

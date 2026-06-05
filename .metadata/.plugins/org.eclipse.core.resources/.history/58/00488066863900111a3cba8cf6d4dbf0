@@ -1,0 +1,44 @@
+package com.java8;
+
+public class LambdaExpression {
+	
+	interface CalculatorSum{
+		void sum(int a, int b);
+	}
+	
+	interface CalculatorProduct{
+		void product(int a, int b);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		  Runnable run = () -> {
+			  for(int i=0; i<5; i++) {
+			  System.out.println("test lambda expression : "+i);
+			  } 
+		  };
+		  
+		  Thread MyThread = new Thread(run);
+		  MyThread.start();
+		 
+		  Thread myThread = new Thread(()->System.out.println("test lambda expression 1"));
+		  myThread.start();
+		  
+		CalculatorSum c = (a,b)->{
+			System.out.println("Sum : "+(a+b));
+		};
+		c.sum(9, 9);
+		
+
+		CalculatorProduct p = (a,b)->{
+			System.out.println("product : "+(a*b));
+		};
+
+		p.product(8,8);
+		
+	}
+	
+	
+}

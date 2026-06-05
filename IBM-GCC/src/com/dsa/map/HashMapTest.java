@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.TreeMap;
 
 import com.dsa.list.Employee;
@@ -46,6 +47,14 @@ public class HashMapTest {
 		
 		treeMap.forEach((k,v)->System.out.println(k+" "+v));
 		
+		Map<Integer, Double> mapEmp = new HashMap<>();
+		mapEmp.put(1, 5000.0);
+		mapEmp.put(2, 7000.0);
+		mapEmp.put(3, 6500.0);
+		
+		Optional<Double> highestSal = mapEmp.values().stream()
+				.max(Double::compare);
+		highestSal.ifPresent(s->System.out.println("highest Sal : "+highestSal));
 		
 		
 	}
